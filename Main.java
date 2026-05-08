@@ -29,32 +29,32 @@ public class Main {
             System.out.println("\n--- MENU ---");
             System.out.println("1. Agregar producto");
             System.out.println("2. Buscar categoria");
-            System.out.println("3. Mostrar colección");
-            System.out.println("4. Salir");
+            System.out.println("3. Mostrar coleccion");
+            System.out.println("4. Mostrar coleccio5n ordenada");
+            System.out.println("5. Salir");
 
             opcion2 = sc.nextInt();
-            sc.nextLine(); // limpiar buffer
+            sc.nextLine();
 
             if (opcion2 == 1) {
                 System.out.println("Ingrese categoria:");
                 String cat = sc.nextLine();
                 inv.agregarProducto(cat);
-
-            } else if (opcion2 == 2) {
+            }            
+            else if (opcion2 == 2) {
                 System.out.println("Ingrese producto:");
                 String prod = sc.nextLine();
                 inv.buscarCategoria(prod);
-
-            } else if (opcion2 == 3) {
+            } 
+            else if (opcion2 == 3) {
                 inv.mostrarCarrito();
-
-            } else if (opcion2 == 4) {
-                System.out.println("Saliendo...");
-            } else {
-                System.out.println("Opcion invalida");
-            }
+            } 
+            else if (opcion2 == 4) {
+            inv.mostrarCarritoOrdenado();
+            } 
+            else if (opcion2 == 5) {
+            System.out.println("Saliendo...");
+            }           
         }
-
-        sc.close();
     }
 }

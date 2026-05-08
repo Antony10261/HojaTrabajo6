@@ -84,4 +84,31 @@ public class Inventario {
             System.out.println(producto + " | " + categoria + " | Cantidad: " + cantidad);
         }
     }
+
+    public void mostrarCarritoOrdenado() {
+
+        if (carrito.isEmpty()) {
+            System.out.println("No hay productos en la colección.");
+            return;
+        }
+
+        System.out.println("\nProductos ordenados por categoría:");
+
+        // clave: categoria + producto
+        TreeMap<String, String> ordenado = new TreeMap<>();
+
+        for (String producto : carrito.keySet()) {
+            String categoria = productos.get(producto);
+            int cantidad = carrito.get(producto);
+
+            // clave compuesta para ordenar
+            String clave = categoria + " - " + producto;
+
+            ordenado.put(clave, "Cantidad: " + cantidad);
+        }
+
+        for (String clave : ordenado.keySet()) {
+            System.out.println(clave + " | " + ordenado.get(clave));
+        }
+    }
 }
