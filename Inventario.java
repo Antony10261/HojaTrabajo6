@@ -67,4 +67,21 @@ public class Inventario {
             System.out.println("Producto no encontrado");
         }
     }
+
+    public void mostrarCarrito() {
+
+        if (carrito.isEmpty()) {
+            System.out.println("No hay productos en la colección.");
+            return;
+        }
+
+        System.out.println("\nProductos en tu colección:");
+
+        for (String producto : carrito.keySet()) {
+            String categoria = productos.get(producto);
+            int cantidad = carrito.get(producto);
+
+            System.out.println(producto + " | " + categoria + " | Cantidad: " + cantidad);
+        }
+    }
 }
