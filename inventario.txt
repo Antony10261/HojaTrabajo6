@@ -1,0 +1,6 @@
+Bebidas|Te Frio
+Bebidas|Coca cola 1 litro
+Frutas|Manzana roja
+Frutas|Manzana verde
+Carnes|Pollo
+Carnes|Res
