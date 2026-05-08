@@ -51,20 +51,34 @@ public class Main {
                 inv.mostrarCarrito();
             } 
             else if (opcion2 == 4) {
-            inv.mostrarCarritoOrdenado();
+                inv.mostrarCarritoOrdenado();
             } 
             else if (opcion2 == 5) {
-            inv.mostrarInventario();
-            } 
+
+                long inicio = System.nanoTime();
+
+                inv.mostrarInventario();
+
+                long fin = System.nanoTime();
+
+                System.out.println("Tiempo de ejecucion: " + (fin - inicio) + " ns");
+            }
             else if (opcion2 == 6) {
-            inv.mostrarInventarioOrdenado();
-            } 
+
+                long inicio = System.nanoTime();
+
+                inv.mostrarInventarioOrdenado();
+
+                long fin = System.nanoTime();
+
+                System.out.println("Tiempo de ejecucion: " + (fin - inicio) + " ns");
+            }
             else if (opcion2 == 7) {
-            System.out.println("Saliendo del programa...");
-            break; // 🔥 ESTO ES LA CLAV
+                System.out.println("Saliendo del programa...");
+                break; // 🔥 ESTO ES LA CLAVE
             }           
             else {
-            System.out.println("Opción inválida");
+                System.out.println("Opción inválida");
             }
         }
     }     

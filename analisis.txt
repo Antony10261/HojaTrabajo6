@@ -1,0 +1,43 @@
+ANALISIS DE TIEMPOS DE EJECUCION
+
+Se realizaron pruebas utilizando las tres implementaciones de Map:
+HashMap, TreeMap y LinkedHashMap.
+
+Resultados obtenidos:
+
+HashMap: 895700 ns
+TreeMap: 1366700 ns
+LinkedHashMap: 1162300 ns
+
+Se puede observar que HashMap es la implementación más rápida,
+mientras que TreeMap es la más lenta.
+
+Esto ocurre porque HashMap utiliza una estructura basada en hashing,
+lo que permite operaciones de inserción y búsqueda en tiempo constante
+en promedio.
+
+Por otro lado, TreeMap utiliza un árbol balanceado (red-black tree),
+lo que implica un costo de O(log n) para sus operaciones, haciéndolo
+más lento.
+
+LinkedHashMap mantiene el orden de inserción, lo cual introduce
+un pequeño overhead adicional, pero sigue siendo más rápido que TreeMap.
+
+CONCLUSION:
+
+HashMap es la opción más eficiente para este caso, ya que ofrece el mejor
+tiempo de ejecución.
+
+------------------------------------------------------------
+
+COMPLEJIDAD DE HASHMAP
+
+La complejidad promedio de HashMap para inserción y búsqueda es O(1),
+debido al uso de funciones hash que permiten ubicar elementos rápidamente.
+
+En el peor caso, cuando hay muchas colisiones, la complejidad puede llegar
+a ser O(n), ya que los elementos se almacenan en listas o estructuras internas.
+
+Se llega a este resultado considerando que cada elemento se distribuye
+en una posición determinada por su hash, permitiendo acceso directo
+en la mayoría de los casos.
