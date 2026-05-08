@@ -111,4 +111,15 @@ public class Inventario {
             System.out.println(clave + " | " + ordenado.get(clave));
         }
     }
+
+    public void mostrarInventarioOrdenado() {
+
+        System.out.println("\nInventario ordenado:");
+
+        TreeMap<String, String> ordenado = new TreeMap<>(productos);
+
+        for (String producto : ordenado.keySet()) {
+            System.out.println(producto + " - " + ordenado.get(producto));
+        }
+    }
 }

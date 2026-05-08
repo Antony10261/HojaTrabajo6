@@ -31,8 +31,9 @@ public class Main {
             System.out.println("2. Buscar categoria");
             System.out.println("3. Mostrar coleccion");
             System.out.println("4. Mostrar coleccio5n ordenada");
-            System.out.println("5. Salir");
-
+            System.out.println("5. Mostrar inventario");
+            System.out.println("6. Mostrar inventario ordenado");
+            System.out.println("7. Salir");
             opcion2 = sc.nextInt();
             sc.nextLine();
 
@@ -53,8 +54,18 @@ public class Main {
             inv.mostrarCarritoOrdenado();
             } 
             else if (opcion2 == 5) {
-            System.out.println("Saliendo...");
+            inv.mostrarInventario();
+            } 
+            else if (opcion2 == 6) {
+            inv.mostrarInventarioOrdenado();
+            } 
+            else if (opcion2 == 7) {
+            System.out.println("Saliendo del programa...");
+            break; // 🔥 ESTO ES LA CLAV
             }           
+            else {
+            System.out.println("Opción inválida");
+            }
         }
-    }
+    }     
 }
